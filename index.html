@@ -14,6 +14,20 @@
     <h1>
         hi Alejo
     </h1>
+    <label for="colorPicker">Choose a color:</label>
+    <input type="color" id="colorPicker">
+
+    <script>
+        const colorPicker = document.getElementById('colorPicker');
+        const headings = document.querySelectorAll('h1');
+
+        colorPicker.addEventListener('input', (event) => {
+            const selectedColor = event.target.value;
+            headings.forEach(heading => {
+                heading.style.color = selectedColor;
+            });
+        });
+    </script>
 </body>
 
 </html>
